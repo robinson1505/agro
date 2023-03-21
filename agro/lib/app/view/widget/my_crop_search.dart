@@ -6,7 +6,7 @@ class MyCropSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
       color: const Color.fromRGBO(
         49,
         160,
@@ -30,7 +30,44 @@ class MyCropSearch extends StatelessWidget {
                 hintText: 'search',
               ),
             ),
-          )
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const Text(
+            "My Crops",
+            style: TextStyle(
+              fontSize: 28,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: const [
+              Expanded(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/background.jpeg'),
+                ),
+              ),
+              Expanded(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/background.jpeg'),
+                ),
+              ),
+              Expanded(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/background.jpeg'),
+                ),
+              ),
+            ],
+          ),
+         
         ],
       ),
     );

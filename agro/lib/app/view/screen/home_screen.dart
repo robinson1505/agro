@@ -20,7 +20,35 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         body: ListView(
-          children: const [MyCropSearch()],
+          children: [
+            const MyCropSearch(),
+            Container(
+              alignment: Alignment.center,
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              color: const Color.fromRGBO(211, 237, 223, 1),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Text(
+                    "Categories",
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Text(
+                    "Diagnosis",
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
         ));
   }
 }
